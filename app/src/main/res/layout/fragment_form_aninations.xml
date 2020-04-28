@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MyThemeIsMaterialDesign.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_fragment_main_screen"
+    android:padding="@dimen/padding_8">
+
+    <TextView
+        android:id="@+id/textAnimationHello"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/hello"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageAnimationForm"
+        android:layout_width="@dimen/width_animation_form_image"
+        android:layout_height="@dimen/height_animation_form_image"
+        android:padding="@dimen/padding_image_animations_form"
+        android:layout_below="@id/textAnimationHello"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

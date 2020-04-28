@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MyThemeIsMaterialDesign.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_1"
+    android:padding="@dimen/padding_activity_16"
+    tools:context=".AuthorizationActivity">
+
+    <FrameLayout
+        android:id="@+id/fragmentMainScreen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_fragment_main_screen"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_top_fragment_main_screen" />
+
+    <RelativeLayout
+        android:id="@+id/relativeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fragmentMainScreen"
+        android:layout_centerInParent="true">
+
+        <CheckBox
+            android:id="@+id/checkRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_8"
+            android:layout_marginEnd="@dimen/margin_end_check_remember_me"
+            android:gravity="center"
+            android:text="@string/remember_me"
+            android:textColor="@color/textForViewAuthorization"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textForgotYourPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/checkRememberMe"
+            android:layout_marginTop="@dimen/margin_top_8"
+            android:layout_toEndOf="@+id/checkRememberMe"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/forgot_your_password"
+            android:textColor="@color/textForViewAuthorization"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/buttonLogIn"
+        style="@style/MyThemeIsMaterialDesign.Authorization.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_button_main_authorization"
+        android:layout_below="@id/relativeText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin_start_button_login"
+        android:layout_marginTop="@dimen/margin_top_8"
+        android:text="@string/log_in"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/buttonRegisterNow"
+        style="@style/MyThemeIsMaterialDesign.Authorization.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_button_main_authorization"
+        android:layout_below="@id/relativeText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_top_8"
+        android:layout_marginEnd="@dimen/margin_end_button_register_now"
+        android:text="@string/register_now"
+        android:textAllCaps="false" />
+
+
+    <LinearLayout
+        android:id="@+id/buttonsSocialNetwork"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_buttons_social_network"
+        android:layout_below="@id/buttonLogIn"
+        android:layout_marginTop="@dimen/margin_top_8"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/padding_start_buttons_social_network"
+        android:paddingEnd="@dimen/padding_end_buttons_social_network">
+
+        <ImageButton
+            android:id="@+id/buttonSocialNetworkOne"
+            android:layout_width="@dimen/width_image_button_social_network"
+            android:layout_height="@dimen/height_image_button_social_network"
+            android:layout_margin="@dimen/margin_2"
+            android:layout_weight="1"
+            android:background="@drawable/shape_oval_button"
+            android:padding="@dimen/padding_6"
+            android:scaleType="fitCenter"
+            android:src="@drawable/selector_item_google_icon" />
+
+        <ImageButton
+            android:id="@+id/buttonSocialNetworkTwo"
+            android:layout_width="@dimen/width_image_button_social_network"
+            android:layout_height="@dimen/height_image_button_social_network"
+            android:layout_margin="@dimen/margin_2"
+            android:layout_weight="1"
+            android:background="@drawable/shape_oval_button"
+            android:padding="@dimen/padding_6"
+            android:scaleType="fitCenter"
+            android:src="@drawable/selector_item_vk_icon" />
+
+        <ImageButton
+            android:id="@+id/buttonSocialNetworkFive"
+            android:layout_width="@dimen/width_image_button_social_network"
+            android:layout_height="@dimen/height_image_button_social_network"
+            android:layout_margin="@dimen/margin_2"
+            android:layout_weight="1"
+            android:background="@drawable/shape_oval_button"
+            android:padding="6dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/selector_item_guest_icon" />
+
+        <ImageButton
+            android:id="@+id/buttonSocialNetworkThree"
+            android:layout_width="@dimen/width_image_button_social_network"
+            android:layout_height="@dimen/height_image_button_social_network"
+            android:layout_margin="@dimen/margin_2"
+            android:layout_weight="1"
+            android:background="@drawable/shape_oval_button"
+            android:padding="@dimen/padding_6"
+            android:scaleType="fitCenter"
+            android:src="@drawable/selector_item_instagram_icon" />
+
+        <ImageButton
+            android:id="@+id/buttonSocialNetworkFour"
+            android:layout_width="@dimen/width_image_button_social_network"
+            android:layout_height="@dimen/height_image_button_social_network"
+            android:layout_margin="@dimen/margin_2"
+            android:layout_weight="1"
+            android:background="@drawable/shape_oval_button"
+            android:padding="@dimen/padding_6"
+            android:scaleType="fitCenter"
+            android:src="@drawable/selector_item_yandex_icon" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,39 @@
+<resources >
+    <!-- My Project Dimens -->
+    <dimen name="padding_activity_16">16dp</dimen>
+    <dimen name="margin_top_fragment_main_screen">160dp</dimen>
+    <dimen name="margin_top_8">8dp</dimen>
+    <dimen name="margin_end_check_remember_me">40dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="height_fragment_main_screen">180dp</dimen>
+    <dimen name="height_button_main_authorization">30dp</dimen>
+    <dimen name="margin_start_button_login">40dp</dimen>
+    <dimen name="margin_end_button_register_now">40dp</dimen>
+    <dimen name="height_buttons_social_network">70dp</dimen>
+    <dimen name="padding_start_buttons_social_network">20dp</dimen>
+    <dimen name="padding_end_buttons_social_network">20dp</dimen>
+    <dimen name="width_image_button_social_network">50dp</dimen>
+    <dimen name="height_image_button_social_network">50dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="corner_radius_button_18">18dp</dimen>
+    <dimen name="stroke_width_button_2">2dp</dimen>
+    <dimen name="width_progress_bar_splash">300dp</dimen>
+    <dimen name="margin_top_progress_bar_splash">400dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="icon_size_login">18dp</dimen>
+    <dimen name="icon_size_password">18dp</dimen>
+    <dimen name="corner_radius_edit_text_16">16dp</dimen>
+    <dimen name="height_edit_text_fragment_authorization">35dp</dimen>
+    <dimen name="height_edit_text_fragment_registration">35dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_image_animations_form">28dp</dimen>
+    <dimen name="width_animation_form_image">180dp</dimen>
+    <dimen name="height_animation_form_image">140dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+</resources>

@@ -3,4 +3,25 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <!-- MaterialComponents -->
+    <color name="my_app_primary_color">#C06E36</color>
+    <color name="my_app_secondary_color">#227A6B</color>
+    <color name="my_app_background_color">#E0AB87</color>
+    <color name="my_app_error_color">#7C0000</color>
+    <color name="my_app_primary_variant_color">#7D3D12</color>
+    <color name="my_app_secondary_variant_color">#0B4F44</color>
+    <color name="my_app_surface_color">#72BCB0</color>
+    <color name="my_app_color_on_primary">#72BCB0</color>
+    <color name="my_app_color_on_secondary">#906243</color>
+    <color name="my_app_color_on_background">#906243</color>
+    <color name="my_app_color_on_error">#CFB6B6</color>
+    <color name="my_app_color_on_surface">#906243</color>
+
+    <!-- Color Project -->
+    <color name="textForViewAuthorization">#291B17</color>
+    <color name="button_stroke_authorization">#71A1C8</color>
+
+
+
 </resources>

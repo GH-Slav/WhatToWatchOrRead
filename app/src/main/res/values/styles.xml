@@ -1,11 +1,60 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="MyThemeIsMaterialDesign" parent="Theme.MaterialComponents.Light.DarkActionBar.Bridge">
+        <!-- Original AppCompat attributes. -->
+        <item name="colorPrimary">@color/my_app_primary_color</item>
+        <item name="colorSecondary">@color/my_app_secondary_color</item>
+        <item name="android:colorBackground">@color/my_app_background_color</item>
+        <item name="colorError">@color/my_app_error_color</item>
+        <!-- New MaterialComponents attributes. -->
+        <item name="colorPrimaryVariant">@color/my_app_primary_variant_color</item>
+        <item name="colorSecondaryVariant">@color/my_app_secondary_variant_color</item>
+        <item name="colorSurface">@color/my_app_surface_color</item>
+        <item name="colorOnPrimary">@color/my_app_color_on_primary</item>
+        <item name="colorOnSecondary">@color/my_app_color_on_secondary</item>
+        <item name="colorOnBackground">@color/my_app_color_on_background</item>
+        <item name="colorOnError">@color/my_app_color_on_error</item>
+        <item name="colorOnSurface">@color/my_app_color_on_surface</item>
     </style>
+
+    <style name="MyThemeIsMaterialDesign.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyThemeIsMaterialDesign.Authorization.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">@dimen/corner_radius_button_18</item>
+        <item name="strokeWidth">@dimen/stroke_width_button_2</item>
+        <item name="strokeColor">@color/button_stroke_authorization</item>
+        <item name="boxStrokeWidth">16dp</item>
+    </style>
+
+    <style name="MyThemeIsMaterialDesign.Authorization.EditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="cornerRadius">@dimen/corner_radius_edit_text_16</item>
+    </style>
+
+    <style name="MyThemeIsMaterialDesign.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemTextAppearanceActive">
+            @style/MyThemeIsMaterialDesign.BottomNavigationView.TextAppearance
+        </item>
+        <item name="itemTextAppearanceInactive">
+            @style/MyThemeIsMaterialDesign.BottomNavigationView.TextAppearance
+        </item>
+    </style>
+
+    <style name="MyThemeIsMaterialDesign.BottomNavigationView.TextAppearance" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="MyThemeIsMaterialDesign.Tabs" parent="Widget.Design.TabLayout">
+        <item name="tabTextAppearance">@style/MyThemeIsMaterialDesign.Tabs.TextAppearance</item>
+    </style>
+
+    <style name="MyThemeIsMaterialDesign.Tabs.TextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
 
 </resources>

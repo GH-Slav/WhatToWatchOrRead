@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MyThemeIsMaterialDesign.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_fragment_main_screen">
+
+    <TextView
+        android:id="@+id/titleTextRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registration"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextRegistrationLogInTitle"
+        style="@style/MyThemeIsMaterialDesign.Authorization.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_edit_text_fragment_authorization"
+        android:layout_margin="@dimen/margin_8"
+        android:hint="@string/enter_your_email"
+        android:layout_below="@id/titleTextRegistration"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/list_item_icon_size_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextRegistrationLogIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextRegistrationPasswordTitle"
+        style="@style/MyThemeIsMaterialDesign.Authorization.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_edit_text_fragment_authorization"
+        android:layout_below="@id/editTextRegistrationLogInTitle"
+        android:layout_margin="@dimen/margin_8"
+        android:hint="@string/enter_your_password"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/list_item_icon_size_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextRegistrationPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextRegistrationConfirmPasswordTitle"
+        style="@style/MyThemeIsMaterialDesign.Authorization.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_edit_text_fragment_authorization"
+        android:layout_below="@id/editTextRegistrationPasswordTitle"
+        android:layout_margin="@dimen/margin_8"
+        android:hint="@string/confirm_password"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/list_item_icon_size_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextRegistrationConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+</RelativeLayout>
