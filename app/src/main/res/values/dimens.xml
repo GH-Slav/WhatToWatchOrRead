@@ -34,6 +34,13 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margin_bottom_recycler_view_search">50dp</dimen>
+    <dimen name="radius_15">15dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_2">2dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="size_text_rating">29sp</dimen>
+    <dimen name="height_view_image">160dp</dimen>
 
 
 </resources>

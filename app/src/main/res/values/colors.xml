@@ -21,7 +21,7 @@
     <!-- Color Project -->
     <color name="textForViewAuthorization">#291B17</color>
     <color name="button_stroke_authorization">#71A1C8</color>
-
+    <color name="color_rating">#574E05</color>
 
 
 </resources>

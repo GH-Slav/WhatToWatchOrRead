@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.history.HistoryFragment">
 
-    <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true">
-
-        <com.google.android.material.tabs.TabLayout
+    <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs_history"
             style="@style/MyThemeIsMaterialDesign.Tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            app:tabMode="fixed"
+            android:layout_marginTop="?attr/actionBarSize"
             app:tabIndicatorAnimationDuration="800"
-            app:tabInlineLabel="true">
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorGravity="bottom"
+            app:tabInlineLabel="true"
+            app:tabMode="fixed">
 
-            <com.google.android.material.tabs.TabItem
+        <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_pets_black_24dp"
-                android:text="@string/you"
+                android:text="@string/you" />
 
-                />
-
-            <com.google.android.material.tabs.TabItem
+        <com.google.android.material.tabs.TabItem
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_supervisor_account_black_24dp"
                 android:text="@string/friends" />
 
-        </com.google.android.material.tabs.TabLayout>
-    </androidx.viewpager.widget.ViewPager>
-</RelativeLayout>
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

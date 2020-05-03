@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardApp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_8"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Media -->
+        <FrameLayout
+            android:id="@+id/viewImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_view_image"
+            android:background="@drawable/shape_rectangle_card">
+
+            <ImageView
+                android:id="@+id/cardAppImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_2"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/cardAppAgeRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/padding_8"
+                android:text="@string/agerating"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cardAppRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="@dimen/padding_8"
+                android:textColor="@color/color_rating"
+                android:textSize="@dimen/size_text_rating"
+                android:textStyle="bold"
+                android:text="@string/_100"
+                android:gravity="center"
+                android:background="@drawable/shape_oval_rating"/>
+
+        </FrameLayout>
+
+        <ScrollView
+            android:id="@+id/cardText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewImage">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rectangle_card"
+                android:padding="@dimen/padding_16">
+
+                <!-- Title, secondary and supporting text -->
+                <TextView
+                    android:id="@+id/cardAppTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title"
+                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                <TextView
+                    android:id="@+id/cardAppSecondaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardAppTitle"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="@string/secondary_text"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+
+                <TextView
+                    android:id="@+id/cardAppSupportingText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cardAppSecondaryText"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:text="@string/supporting_text"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    />
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/cardChip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardText"
+            android:background="@drawable/shape_rectangle_card">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textGenres"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/genres"
+                    android:textSize="@dimen/text_size_14"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_24"
+                    android:layout_marginStart="@dimen/margin_24"
+                    android:textColor="@color/textForViewAuthorization"/>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+
+        <!-- Buttons -->
+        <RelativeLayout
+            android:id="@+id/cardAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardChip"
+            android:background="@drawable/shape_rectangle_card"
+            android:padding="@dimen/padding_8">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchMaterialAddDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/margin_16"
+                android:text="@string/bookmarks"
+                android:textOff="@string/add"
+                android:textOn="@string/delete"
+                app:showText="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

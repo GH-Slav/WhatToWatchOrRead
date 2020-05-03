@@ -18,7 +18,7 @@
         <item name="colorOnSurface">@color/my_app_color_on_surface</item>
     </style>
 
-    <style name="MyThemeIsMaterialDesign.NoActionBar">
+    <style name="MyThemeIsMaterialDesign.NoActionBar" parent="MyThemeIsMaterialDesign">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -55,6 +55,14 @@
     <style name="MyThemeIsMaterialDesign.Tabs.TextAppearance" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
     </style>
+
+    <style name="MyThemeIsMaterialDesign.Main.EditText" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+    </style>
+
+
+
+
+
 
 
 </resources>
