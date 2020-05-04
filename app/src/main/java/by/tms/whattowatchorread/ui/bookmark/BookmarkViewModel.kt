@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class BookmarkViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "книга"
+        value = "закладки"
     }
     val text: LiveData<String> = _text
 }

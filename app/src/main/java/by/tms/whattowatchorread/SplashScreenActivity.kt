@@ -3,6 +3,7 @@ package by.tms.whattowatchorread
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import by.tms.whattowatchorread.authorization.AuthorizationActivity
 import kotlinx.coroutines.*
 
 class SplashScreenActivity : AppCompatActivity() {

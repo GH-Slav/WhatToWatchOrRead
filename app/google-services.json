@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "409544131160",
+    "firebase_url": "https://whattowatchorread.firebaseio.com",
+    "project_id": "whattowatchorread",
+    "storage_bucket": "whattowatchorread.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409544131160:android:eb2ac0daaaf2695791802d",
+        "android_client_info": {
+          "package_name": "by.tms.whattowatchorread"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409544131160-pmbavmqblrpfijunrdkh010moqajidrt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8qN1tSt15oWOBAEydrUJbilZoEIW2-PI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409544131160-pmbavmqblrpfijunrdkh010moqajidrt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

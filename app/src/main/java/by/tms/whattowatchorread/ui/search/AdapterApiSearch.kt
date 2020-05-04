@@ -1,41 +1,72 @@
 package by.tms.whattowatchorread.ui.search
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import by.tms.whattowatchorread.R
+import by.tms.whattowatchorread.entity.contentratings.ContentRatings
+import by.tms.whattowatchorread.entity.details.Details
+import by.tms.whattowatchorread.entity.detailsepisode.DetailsEpisode
 import by.tms.whattowatchorread.entity.multisearch.MultiSearch
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.data_api_card_app.view.*
+import kotlinx.android.synthetic.main.item_data_api_card_app.view.*
 
-class AdapterApiSearch(val listMedia: MultiSearch?) :
-    RecyclerView.Adapter<AdapterApiSearch.MediaViewHolder>() {
-
+class AdapterApiSearch(
+    val listMultiSearch: MultiSearch?,
+    val listDetails: Details?,
+    val listDetailsEpisode: DetailsEpisode?,
+    val listContentRating: ContentRatings?
+) : RecyclerView.Adapter<AdapterApiSearch.MediaViewHolder>() {
 
     class MediaViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MediaViewHolder {
         val itemView =
-            LayoutInflater.from(parent.context).inflate(R.layout.data_api_card_app, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_data_api_card_app, parent, false)
         return MediaViewHolder(itemView)
     }
 
     override fun getItemCount(): Int {
-        return listMedia?.results!!.size
+    //    return listMultiSearch?.totalResults!!
+        return 2
+
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MediaViewHolder, position: Int) {
         val viewMedia = holder.itemView
+        val name = listMultiSearch?.results?.get(position)?.name
+        val firstAirDate = listDetails?.firstAirDate
+        val originalName = listMultiSearch?.results?.get(position)?.originalName
+        val originCountry = listMultiSearch?.results?.get(position)?.originCountry
+        val overview = listMultiSearch?.results?.get(position)?.overview
+        val voteAverage = listMultiSearch?.results?.get(position)?.voteAverage
+        val posterPath = listMultiSearch?.results?.get(position)?.posterPath
+        val genreIds = listMultiSearch?.results?.get(position)?.genreIds
+        val episodeRunTime = listDetails?.episodeRunTime
+        val iso31661 = listContentRating?.results?.get(0)?.iso31661
+        val rating = listContentRating?.results?.get(0)?.rating
 
-        viewMedia.cardAppTitle.text = listMedia?.results?.get(position)?.name
-        viewMedia.cardAppSecondaryText.text = listMedia?.results?.get(position)?.originalName
-        viewMedia.cardAppRating.text = listMedia?.results?.get(position)?.voteAverage.toString()
 
-        val url = listMedia?.results?.get(position)?.posterPath
+//        searchViewModel?.detailsEpisode?.value?.name
+//        searchViewModel?.detailsEpisode?.value?.overview
+//        searchViewModel?.detailsEpisode?.value?.seasonNumber
+//        searchViewModel?.detailsEpisode?.value?.voteAverage
+//        searchViewModel?.detailsEpisode?.value?.stillPath
 
-        Picasso.get().load("https://image.tmdb.org/t/p/w500${url}").into(viewMedia.cardAppImage)
+
+
+                viewMedia.cardAppTitleLarge.text = "$name $firstAirDate"
+        viewMedia.cardAppSecondaryTextLarge.text = "$originalName $originCountry"
+        viewMedia.cardAppSupportingTextLarge.text = "Episode time $episodeRunTime m \n $overview "
+        viewMedia.textGenresLarge.text = genreIds.toString()
+        viewMedia.cardAppRatingLarge.text = voteAverage.toString()
+        viewMedia.cardAppAgeRatingLarge.text = "$iso31661 $rating"
+        Picasso.get().load("https://image.tmdb.org/t/p/w500${posterPath}").into(viewMedia.cardAppImageLarge)
+
+        //      viewMedia.switchMaterialAddDelete
 
     }
 }
