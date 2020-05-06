@@ -63,4 +63,19 @@
         android:layout_marginTop="@dimen/padding_8"
         android:text="@string/log_in"/>
 
+    <TextView
+        android:id="@+id/textForgotYourPasswordLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/buttonOkLogIn"
+        android:layout_marginTop="@dimen/margin_top_8"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="@string/forgot_your_password"
+        android:textColor="@color/textForViewAuthorization"
+        android:textSize="@dimen/text_size_14"
+        android:textStyle="normal"
+        android:layout_marginStart="@dimen/margin_24"/>
+
 </RelativeLayout>

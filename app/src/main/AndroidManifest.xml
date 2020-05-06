@@ -11,16 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyThemeIsMaterialDesign.NoActionBar">
+        <activity android:name=".authorization.activity.RegActivity"></activity>
+        <activity android:name=".authorization.activity.LogInActivity" />
         <activity android:name=".CardActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SplashScreenActivity" />
         <activity android:name=".authorization.AuthorizationActivity" />
+        <activity android:name=".authorization.activity.ForgotPasswordActivity" />
     </application>
 
 </manifest>

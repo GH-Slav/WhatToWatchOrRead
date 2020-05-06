@@ -36,6 +36,8 @@
     <string name="delete">DELETE</string>
     <string name="genres">Genres</string>
     <string name="_100">100%</string>
+    <string name="email">Email</string>
+    <string name="ok">OK</string>
 
 
 </resources>

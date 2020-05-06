@@ -42,26 +42,25 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|start"
                 android:layout_margin="@dimen/padding_8"
+                android:background="@drawable/shape_oval_rating"
+                android:gravity="center"
+                android:text="@string/_100"
                 android:textColor="@color/color_rating"
                 android:textSize="@dimen/size_text_rating"
-                android:textStyle="bold"
-                android:text="@string/_100"
-                android:gravity="center"
-                android:background="@drawable/shape_oval_rating"/>
+                android:textStyle="bold" />
 
         </FrameLayout>
 
-        <ScrollView
+
+        <RelativeLayout
             android:id="@+id/cardTextLarge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/viewImageLarge">
+            android:layout_below="@id/viewImageLarge"
+            android:background="@drawable/shape_rectangle_card"
+            android:padding="@dimen/padding_16">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_rectangle_card"
-                android:padding="@dimen/padding_16">
+
 
                 <!-- Title, secondary and supporting text -->
                 <TextView
@@ -79,18 +78,23 @@
                     android:layout_marginTop="@dimen/margin_8"
                     android:text="@string/secondary_text"
                     android:textAppearance="?attr/textAppearanceBody2" />
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardAppSecondaryTextLarge">
 
                 <TextView
                     android:id="@+id/cardAppSupportingTextLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/cardAppSecondaryTextLarge"
                     android:layout_marginTop="@dimen/margin_8"
+                    android:ellipsize="end"
+                    android:maxLines="5"
                     android:text="@string/supporting_text"
-                    android:textAppearance="?attr/textAppearanceBody2"
-                    />
-            </RelativeLayout>
-        </ScrollView>
+                    android:textAppearance="?attr/textAppearanceBody2" />
+            </ScrollView>
+        </RelativeLayout>
+
 
         <RelativeLayout
             android:id="@+id/cardChipLarge"
@@ -107,14 +111,14 @@
                     android:id="@+id/textGenresLarge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/genres"
-                    android:textSize="@dimen/text_size_14"
-                    android:textAllCaps="true"
-                    android:layout_marginTop="@dimen/margin_8"
-                    android:layout_marginBottom="@dimen/margin_8"
-                    android:layout_marginEnd="@dimen/margin_24"
                     android:layout_marginStart="@dimen/margin_24"
-                    android:textColor="@color/textForViewAuthorization"/>
+                    android:layout_marginTop="@dimen/margin_8"
+                    android:layout_marginEnd="@dimen/margin_24"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:text="@string/genres"
+                    android:textAllCaps="true"
+                    android:textColor="@color/textForViewAuthorization"
+                    android:textSize="@dimen/text_size_14" />
 
             </HorizontalScrollView>
 
