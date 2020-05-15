@@ -16,5 +16,8 @@
   - Рекомендация по друзяьм (соц сети)
   - Счетчик по количеству вами просммотреных или прочитанных произведений
   
+  Скрины
+  
+  https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/01.jpg
   
   
