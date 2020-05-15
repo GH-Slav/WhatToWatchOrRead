@@ -18,6 +18,6 @@
   
   Скрины
   
-  https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/01.jpg
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/01.jpg)
   
   
