@@ -10,22 +10,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import by.tms.whattowatchorread.R
 
-class NotificationsFragment : Fragment() {
+class NotificationsFragment : Fragment(R.layout.fragment_bottom_notifications) {
 
     private lateinit var notificationsViewModel: NotificationsViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        notificationsViewModel =
-            ViewModelProviders.of(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_bottom_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dd)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
     }
 }

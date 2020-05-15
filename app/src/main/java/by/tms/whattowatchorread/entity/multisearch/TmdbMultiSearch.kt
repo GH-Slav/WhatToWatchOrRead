@@ -3,7 +3,7 @@ package by.tms.whattowatchorread.entity.multisearch
 
 import com.google.gson.annotations.SerializedName
 
-data class MultiSearch(
+data class TmdbMultiSearch(
     @SerializedName("page")
     val page: Int,
     @SerializedName("results")

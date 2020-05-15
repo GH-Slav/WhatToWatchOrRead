@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="by.tms.whattowatchorread">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <supports-screens android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true" />
 
     <application
         android:allowBackup="true"
@@ -11,9 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/MyThemeIsMaterialDesign.NoActionBar">
-        <activity android:name=".authorization.activity.RegActivity"></activity>
+        <activity android:name=".authorization.activity.RegActivity" />
         <activity android:name=".authorization.activity.LogInActivity" />
-        <activity android:name=".CardActivity" />
+        <activity android:name=".ui.search.card.CardActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
@@ -24,6 +31,7 @@
         </activity>
         <activity android:name=".authorization.AuthorizationActivity" />
         <activity android:name=".authorization.activity.ForgotPasswordActivity" />
+        <activity android:name=".ui.search.card.CardPoster" />
     </application>
 
 </manifest>

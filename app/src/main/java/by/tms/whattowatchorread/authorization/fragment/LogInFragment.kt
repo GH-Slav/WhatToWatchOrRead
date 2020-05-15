@@ -9,16 +9,8 @@ import by.tms.whattowatchorread.R
 
 
 
-class LogInFragment : Fragment() {
+class LogInFragment : Fragment(R.layout.fragment_form_authorization) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_form_authorization, container, false)
-
-    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

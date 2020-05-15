@@ -12,22 +12,14 @@ import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_bottom_history.*
 
-class HistoryFragment : Fragment() {
+class HistoryFragment : Fragment(R.layout.fragment_bottom_history) {
 
-    private lateinit var modelHistory: HistoryViewModel
+    private lateinit var historyViewModel: HistoryViewModel
     private lateinit var viewPage: ViewPager
     private lateinit var tabLayout: TabLayout
     private lateinit var fragmentYou: YouFragment
     private lateinit var fragmentFriends: FriendsFragment
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_bottom_history, container, false)
-    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

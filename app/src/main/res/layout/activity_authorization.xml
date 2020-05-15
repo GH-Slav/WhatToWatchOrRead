@@ -9,19 +9,51 @@
     android:padding="@dimen/padding_activity_16"
     tools:context=".authorization.AuthorizationActivity">
 
-    <FrameLayout
-        android:id="@+id/fragmentMainScreen"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextAuthorizationLogInTitle"
+        style="@style/MyThemeIsMaterialDesign.Authorization.EditText"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/height_fragment_main_screen"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="@dimen/margin_top_fragment_main_screen" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_fragment_main_screen"
+        android:layout_marginStart="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:hint="@string/enter_your_email"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/list_item_icon_size_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextAuthorizationPasswordTitle"
+        style="@style/MyThemeIsMaterialDesign.Authorization.EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAuthorizationLogInTitle"
+        android:layout_margin="@dimen/margin_8"
+        android:hint="@string/enter_your_password"
+        app:errorEnabled="true"
+        app:passwordToggleEnabled="true"
+        app:startIconDrawable="@drawable/list_item_icon_size_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextAuthorizationPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <RelativeLayout
         android:id="@+id/relativeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/fragmentMainScreen"
+        android:layout_below="@+id/editTextAuthorizationPasswordTitle"
         android:layout_centerInParent="true">
 
         <CheckBox

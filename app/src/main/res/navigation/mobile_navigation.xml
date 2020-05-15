@@ -18,10 +18,10 @@
         tools:layout="@layout/fragment_bottom_bookmark" />
 
     <fragment
-        android:id="@+id/navigation_news"
-        android:name="by.tms.whattowatchorread.ui.news.NewsFragment"
-        android:label="@string/title_news"
-        tools:layout="@layout/fragment_bottom_news" />
+        android:id="@+id/navigation_top"
+        android:name="by.tms.whattowatchorread.ui.top.TopFragment"
+        android:label="@string/title_top"
+        tools:layout="@layout/fragment_bottom_top_popularity" />
 
     <fragment
         android:id="@+id/navigation_history"

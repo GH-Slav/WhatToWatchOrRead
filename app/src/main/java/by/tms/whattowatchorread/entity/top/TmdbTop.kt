@@ -1,10 +1,9 @@
-package by.tms.whattowatchorread.entity.tvserials
+package by.tms.whattowatchorread.entity.top
 
 
-import by.tms.whattowatchorread.entity.tvserials.Result
 import com.google.gson.annotations.SerializedName
 
-data class TVSerial(
+data class TmdbTop(
     @SerializedName("page")
     val page: Int,
     @SerializedName("results")

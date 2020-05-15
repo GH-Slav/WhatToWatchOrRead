@@ -10,22 +10,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import by.tms.whattowatchorread.R
 
-class BookmarkFragment : Fragment() {
+class BookmarkFragment : Fragment(R.layout.fragment_bottom_bookmark) {
 
     private lateinit var bookmarkViewModel: BookmarkViewModel
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        bookmarkViewModel =
-            ViewModelProviders.of(this).get(BookmarkViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_bottom_bookmark, container, false)
-        val textView: TextView = root.findViewById(R.id.text_aa)
-        bookmarkViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+
     }
 }

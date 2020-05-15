@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardApp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_8"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/viewImageLarge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_view_image"
+            android:background="@drawable/shape_rectangle_card">
+
+            <FrameLayout
+                android:id="@+id/frameImage"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_2"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop">
+
+                <ImageView
+                    android:id="@+id/cardAppImageLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/cardAppRatingLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:gravity="center"
+                    android:text="@string/_100"
+                    android:textColor="@color/color_rating"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageRatingPeople"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_8"
+                    android:background="@drawable/item_size_rating" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/cardAppTitleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/frameImage"
+                android:layout_margin="@dimen/margin_8"
+                android:text="@string/title"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <TextView
+                android:id="@+id/cardAppSecondaryTextLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardAppTitleLarge"
+                android:layout_margin="@dimen/margin_8"
+                android:layout_toEndOf="@id/frameImage"
+                android:text="@string/secondary_text"
+                android:textAppearance="?attr/textAppearanceBody2" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardAppSecondaryTextLarge"
+                android:layout_toEndOf="@id/frameImage"
+                android:layout_margin="@dimen/margin_8">
+
+                <TextView
+                    android:id="@+id/cardAppSupportingTextLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="5"
+                    android:text="@string/supporting_text"
+                    android:textAppearance="?attr/textAppearanceBody2" />
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+
+        <!-- Buttons -->
+        <RelativeLayout
+            android:id="@+id/cardAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewImageLarge"
+            android:background="@drawable/shape_rectangle_card"
+            android:padding="@dimen/padding_8">
+
+            <Button
+                android:id="@+id/buttonLike"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="@dimen/margin_8"
+                android:background="@drawable/item_size_like" />
+
+            <TextView
+                android:id="@+id/textLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/buttonLike"
+                android:layout_alignParentStart="@id/buttonLike"
+                android:layout_marginStart="70dp"
+                android:gravity="center_horizontal"
+                android:text="@string/_999"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

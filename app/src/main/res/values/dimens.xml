@@ -1,7 +1,7 @@
 <resources >
     <!-- My Project Dimens -->
     <dimen name="padding_activity_16">16dp</dimen>
-    <dimen name="margin_top_fragment_main_screen">180dp</dimen>
+    <dimen name="margin_top_fragment_main_screen">320dp</dimen>
     <dimen name="margin_top_8">8dp</dimen>
     <dimen name="margin_end_check_remember_me">40dp</dimen>
     <dimen name="text_size_14">14sp</dimen>

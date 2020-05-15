@@ -8,10 +8,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import by.tms.whattowatchorread.MainActivity
 import by.tms.whattowatchorread.R
+import by.tms.whattowatchorread.authorization.AuthorizationActivity
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_log_in.*
+import kotlinx.android.synthetic.main.activity_forgot_password.*
+
 
 private val TAG = "ForgotPasswordActivity"
 //UI elements
@@ -59,7 +60,7 @@ class ForgotPasswordActivity: AppCompatActivity() {
         }
     }
     private fun updateUI() {
-        val intent = Intent(this@ForgotPasswordActivity, LogInActivity::class.java)
+        val intent = Intent(this@ForgotPasswordActivity, AuthorizationActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }

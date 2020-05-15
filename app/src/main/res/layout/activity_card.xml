@@ -47,7 +47,7 @@
                 android:textStyle="bold"
                 android:text="@string/_100"
                 android:gravity="center"
-                android:background="@drawable/shape_oval_rating"/>
+                android:background="@drawable/item_size_rating"/>
 
         </FrameLayout>
 
@@ -131,7 +131,7 @@
             android:padding="@dimen/padding_8">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerViewSearch"
+                android:id="@+id/recyclerViewSearchCard"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
 

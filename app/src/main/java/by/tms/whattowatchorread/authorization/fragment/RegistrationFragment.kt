@@ -16,16 +16,8 @@ import com.google.firebase.auth.FirebaseAuthRegistrar
 import com.google.firebase.auth.FirebaseUser
 
 const val TAG = "TAG"
-class RegistrationFragment : Fragment() {
+class RegistrationFragment : Fragment(R.layout.fragment_form_registration) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_form_registration, container, false)
-
-    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)

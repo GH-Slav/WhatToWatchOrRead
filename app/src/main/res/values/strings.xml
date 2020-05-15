@@ -38,6 +38,8 @@
     <string name="_100">100%</string>
     <string name="email">Email</string>
     <string name="ok">OK</string>
+    <string name="title_top">Top</string>
+    <string name="_999">999</string>
 
 
 </resources>

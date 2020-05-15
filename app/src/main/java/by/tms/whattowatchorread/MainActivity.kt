@@ -1,37 +1,14 @@
 package by.tms.whattowatchorread
 
 import android.os.Bundle
-import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import by.tms.whattowatchorread.retrofit.MediaSearchFactoryApi
-import by.tms.whattowatchorread.ui.search.SearchViewModel
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 
-//const val GENREIDS = "GENREIDS"
-//const val ORIGINALNAME = "ORIGINALNAME"
-//const val NAME = "NAME"
-//const val ORIGINCOUNTRY = "ORIGINCOUNTRY"
-//const val FIRSTAIRDATE = "FIRSTAIRDATE"
-//const val VOTEAVERAGE = "VOTEAVERAGE"
-//const val OVERVIEW = "OVERVIEW"
-//const val POSTERPATH = "POSTERPATH"
-//const val EPISODERUNTIME = "EPISODERUNTIME"
-//const val NAMEEPISODE = "NAMEEPISODE"
-//const val OVERVIEWEPISODE = "OVERVIEWEPISODE"
-//const val SEASONNUMBER = "SEASONNUMBER"
-//const val VOTEAVERAGEEPISODE = "VOTEAVERAGEEPISODE"
-//const val STILLPATH = "STILLPATH"
-//const val ISO = "ISO"
-//const val CONTENTRATING = "CONTENTRATING"
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         val titleToolbarOne = resources.getString(R.string.title_search)
         val titleToolbarTwo = resources.getString(R.string.title_bookmark)
-        val titleToolbarThree = resources.getString(R.string.title_news)
+        val titleToolbarThree = resources.getString(R.string.title_top)
         val titleToolbarFour = resources.getString(R.string.title_history)
         val titleToolbarFive = resources.getString(R.string.title_notifications)
         val titleToolbarDefault = resources.getString(R.string.app_name)
@@ -63,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             topAppBar.title = when (destination.id) {
                 R.id.navigation_search -> titleToolbarOne
                 R.id.navigation_bookmark -> titleToolbarTwo
-                R.id.navigation_news -> titleToolbarThree
+                R.id.navigation_top -> titleToolbarThree
                 R.id.navigation_history -> titleToolbarFour
                 R.id.navigation_notifications -> titleToolbarFive
                 else -> titleToolbarDefault

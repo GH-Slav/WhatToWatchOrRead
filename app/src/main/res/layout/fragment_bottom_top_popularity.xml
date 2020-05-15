@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.news.NewsFragment">
+    tools:context=".ui.top.TopFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewNews"
+        android:id="@+id/recyclerViewTop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"

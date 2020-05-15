@@ -3,7 +3,7 @@ package by.tms.whattowatchorread.entity.details
 
 import com.google.gson.annotations.SerializedName
 
-data class Details(
+data class TmdbDetails(
     @SerializedName("backdrop_path")
     val backdropPath: String,
     @SerializedName("created_by")

@@ -1,4 +1,4 @@
-package by.tms.whattowatchorread.entity.tvserials
+package by.tms.whattowatchorread.entity.top
 
 
 import com.google.gson.annotations.SerializedName

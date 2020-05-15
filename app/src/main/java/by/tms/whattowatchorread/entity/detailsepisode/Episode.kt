@@ -3,7 +3,7 @@ package by.tms.whattowatchorread.entity.detailsepisode
 
 import com.google.gson.annotations.SerializedName
 
-data class DetailsEpisode(
+data class Episode(
     @SerializedName("air_date")
     val airDate: String,
     @SerializedName("crew")
@@ -22,6 +22,8 @@ data class DetailsEpisode(
     val productionCode: String,
     @SerializedName("season_number")
     val seasonNumber: Int,
+    @SerializedName("show_id")
+    val showId: Int,
     @SerializedName("still_path")
     val stillPath: String,
     @SerializedName("vote_average")

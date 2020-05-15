@@ -1,26 +1,48 @@
 package by.tms.whattowatchorread.ui.search
 
 import android.annotation.SuppressLint
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import by.tms.whattowatchorread.CardActivity
-import by.tms.whattowatchorread.MainActivity
 import by.tms.whattowatchorread.R
-import by.tms.whattowatchorread.entity.contentratings.ContentRatings
-import by.tms.whattowatchorread.entity.details.Details
-import by.tms.whattowatchorread.entity.detailsepisode.DetailsEpisode
-import by.tms.whattowatchorread.entity.multisearch.MultiSearch
+import by.tms.whattowatchorread.entity.contentratings.TmdbContentRatings
+import by.tms.whattowatchorread.entity.multisearch.TmdbMultiSearch
+import by.tms.whattowatchorread.ui.search.card.CardActivity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_data_api_card_app.view.*
 
+const val ID = "ID"
+const val MEDIA = "MEDIA"
+//const val GENREIDS = "GENREIDS"
+//const val ORIGINALNAME = "ORIGINALNAME"
+//const val NAME = "NAME"
+//const val ORIGINCOUNTRY = "ORIGINCOUNTRY"
+//const val FIRSTAIRDATE = "FIRSTAIRDATE"
+//const val VOTEAVERAGE = "VOTEAVERAGE"
+//const val OVERVIEW = "OVERVIEW"
+const val POSTERPATH = "POSTERPATH"
+//const val EPISODERUNTIME = "EPISODERUNTIME"
+//const val NAMEEPISODE = "NAMEEPISODE"
+//const val OVERVIEWEPISODE = "OVERVIEWEPISODE"
+//const val SEASONNUMBER = "SEASONNUMBER"
+//const val VOTEAVERAGEEPISODE = "VOTEAVERAGEEPISODE"
+//const val STILLPATH = "STILLPATH"
+//const val ISO = "ISO"
+//const val CONTENTRATING = "CONTENTRATING"
+
 class AdapterApiSearch(
-    val listMultiSearch: MultiSearch
-) : RecyclerView.Adapter<AdapterApiSearch.MediaViewHolder>() {
+    var listSearchTmdb: TmdbMultiSearch?,
+    var listContentRatingTmdb: TmdbContentRatings?
+) :
+    RecyclerView.Adapter<AdapterApiSearch.MediaViewHolder>() {
+
+
+//    fun setData(newListSearchTmdb: TmdbMultiSearch?){
+//        listSearchTmdb = newListSearchTmdb
+//        notifyDataSetChanged()
+//    }
 
     class MediaViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
@@ -32,47 +54,54 @@ class AdapterApiSearch(
     }
 
     override fun getItemCount(): Int {
-     return listMultiSearch.results.size
-
+        return listSearchTmdb?.results?.count()!!
     }
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: MediaViewHolder, position: Int) {
         val viewMedia = holder.itemView
-        val name = listMultiSearch.results.get(position).name
-        //    val firstAirDate = listDetails?.firstAirDate
-        val originalName = listMultiSearch.results.get(position).originalName
-        val originCountry = listMultiSearch.results.get(position).originCountry
-        val overview = listMultiSearch.results.get(position).overview
-        val voteAverage = listMultiSearch.results.get(position).voteAverage
-        val posterPath = listMultiSearch.results.get(position).posterPath
-        val genreIds = listMultiSearch.results.get(position).genreIds
-//        val episodeRunTime = listDetails?.episodeRunTime
-        //    val iso31661 = listContentRating?.results?.get(0)?.iso31661
-        //      val rating = listContentRating?.results?.get(0)?.rating
+        val name = listSearchTmdb?.results?.get(position)?.name
+        val id = listSearchTmdb?.results?.get(position)?.id
+        val mediaType = listSearchTmdb?.results?.get(position)?.mediaType
+        val firstAirDate = listSearchTmdb?.results?.get(position)?.firstAirDate
+        val originalName = listSearchTmdb?.results?.get(position)?.originalName
+
+        val originCountry = listSearchTmdb?.results?.get(position)?.originCountry?.get(0)
+        val overview = listSearchTmdb?.results?.get(position)?.overview
+        val voteAverage = listSearchTmdb?.results?.get(position)?.voteAverage
+        val posterPath = listSearchTmdb?.results?.get(position)?.posterPath
+        val genreIds = listSearchTmdb?.results?.get(position)?.genreIds
+        //      val episodeRunTime = listSearchTmdb?.results?.get(position)
+
+        val iso31661 = listContentRatingTmdb?.results?.get(position)?.iso31661
+        val rating = listContentRatingTmdb?.results?.get(position)?.rating
 
 
-//        searchViewModel?.detailsEpisode?.value?.name
-//        searchViewModel?.detailsEpisode?.value?.overview
-//        searchViewModel?.detailsEpisode?.value?.seasonNumber
-//        searchViewModel?.detailsEpisode?.value?.voteAverage
-//        searchViewModel?.detailsEpisode?.value?.stillPath
-  //      $firstAirDate $episodeRunTime
 
-        viewMedia.cardAppTitleLarge.text = "$name "
-        viewMedia.cardAppSecondaryTextLarge.text = "$originalName $originCountry"
-        viewMedia.cardAppSupportingTextLarge.text = "Episode time m \n $overview "
-//        viewMedia.textGenresLarge.text = genreIds.toString()
+        viewMedia.cardAppTitleLarge.text = "$name"
+        viewMedia.cardAppSecondaryTextLarge.text = "$originalName  $originCountry \n $firstAirDate"
+        viewMedia.cardAppSupportingTextLarge.text = "$overview "
+        genreIds?.forEach { genre -> viewMedia.textGenresLarge.text = "$genre" }
         viewMedia.cardAppRatingLarge.text = voteAverage.toString()
- //       viewMedia.cardAppAgeRatingLarge.text = "$iso31661 $rating"
-        Picasso.get().load("https://image.tmdb.org/t/p/w500${posterPath}")
+        viewMedia.cardAppAgeRatingLarge.text = "$iso31661 $rating"
+        val imageUrl = "https://image.tmdb.org/t/p/w500/$posterPath"
+        Picasso.get().load(imageUrl)
             .into(viewMedia.cardAppImageLarge)
 
         //      viewMedia.switchMaterialAddDelete
 
-        viewMedia.setOnClickListener { val intent = Intent(holder.itemView.context , CardActivity::class.java)
+        viewMedia.setOnClickListener {
+            val intent = Intent(holder.itemView.context, CardActivity::class.java)
+            //intent.putExtra(ID, id)
+         //   intent.putExtra(MEDIA, mediaType)
             holder.itemView.context.startActivity(intent)
         }
+
+//        viewMedia.cardAppImageLarge.setOnClickListener {
+//            val intent = Intent(holder.itemView.context, CardActivity::class.java)
+//            intent.putExtra(POSTERPATH, posterPath)
+//            holder.itemView.context.startActivity(intent)
+//        }
 
     }
 }

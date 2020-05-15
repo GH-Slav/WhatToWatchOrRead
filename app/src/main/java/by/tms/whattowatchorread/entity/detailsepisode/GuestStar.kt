@@ -17,5 +17,5 @@ data class GuestStar(
     @SerializedName("order")
     val order: Int,
     @SerializedName("profile_path")
-    val profilePath: Any
+    val profilePath: String
 )

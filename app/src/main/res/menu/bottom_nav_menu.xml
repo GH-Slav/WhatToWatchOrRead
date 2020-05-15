@@ -13,9 +13,9 @@
         android:title="@string/title_bookmark" />
 
     <item
-        android:id="@+id/navigation_news"
-        android:icon="@drawable/icons_news"
-        android:title="@string/title_news" />
+        android:id="@+id/navigation_top"
+        android:icon="@drawable/icons_top"
+        android:title="@string/title_top" />
 
     <item
         android:id="@+id/navigation_history"
