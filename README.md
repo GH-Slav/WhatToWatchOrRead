@@ -16,5 +16,18 @@
   - Рекомендация по друзяьм (соц сети)
   - Счетчик по количеству вами просммотреных или прочитанных произведений
   
+  Скрины
+  
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/10.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/04.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/05.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/01.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/02.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/03.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/04.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/09.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/9991.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/9992.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/base.jpg)
   
   
