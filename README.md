@@ -18,7 +18,7 @@
   
   Макап
   
-    ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/base.jpg)
+  ![alt text](https://github.com/GH-Slav/WhatToWatchOrRead/blob/master/materials_link/base.jpg)
   
   Скрины(что получилось)
   
